@@ -7,8 +7,12 @@ import { Ingredient } from '../shared/ingredient.model';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent {
-  ingredients:Array<Ingredient> = [
+  ingredients:Ingredient[] = [
     new Ingredient('Meat', 300),
     new Ingredient('Bread', 2)
   ];
+
+  onIngredientAdded(ingredient:Ingredient){
+    this.ingredients.push(ingredient);
+  }
 }
